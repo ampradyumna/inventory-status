@@ -1,0 +1,32 @@
+#%RAML 1.0
+title: inventory-status
+baseUri: https://localhost:8081/getProduct
+/getProduct:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: object
+            properties:
+              itemName:
+                type: string
+                required: true
+                example: ball
+              id:
+                type: number
+                required: true
+                example: 2199
+              status:
+                type: string
+                required: true
+                example: available
+
+
+
+
+
+                
+  
+              
+      
