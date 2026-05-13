@@ -131,7 +131,7 @@ output application/json
 output application/json
 ---
 {
-  "itemName": "ball",
+  "itemName": "Bat",
   "id": 2199,
   "status": "available"
 }]]></ee:set-payload>
