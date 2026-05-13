@@ -6,7 +6,7 @@
 
 	<groupId>656c6150-c4f0-4d4f-ae89-4e6f84709d73</groupId>
 	<artifactId>inventory-status</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>inventory-status</name>
