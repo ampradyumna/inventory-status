@@ -38,7 +38,7 @@
 							<cloudhub2Deployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<provider>MC</provider>
-								<muleVersion>${app.runtime}</muleVersion>
+								<muleVersion>4.11.0</muleVersion>
 								<environment>DEV</environment>
 								<target>Cloudhub-US-East-2</target>																
 								<username>${username}</username>
@@ -83,7 +83,7 @@
 							<cloudhub2Deployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<provider>MC</provider>
-								<muleVersion>${app.runtime}</muleVersion>
+								<muleVersion>4.11.0</muleVersion>
 								<environment>SIT</environment>
 								<applicationName>inventory-status-sit</applicationName>
 								<target>Cloudhub-US-East-2</target>							
@@ -124,14 +124,14 @@
     <version>${mule.maven.plugin.version}</version>
     <extensions>true</extensions>
     <configuration>
-        <muleVersion>${app.runtime}</muleVersion>
+        <muleVersion>4.11.0</muleVersion>
         <cloudhub2Deployment>
             <uri>https://anypoint.mulesoft.com</uri>
             <provider>MC</provider>
             <environment>${environment}</environment>
             <target>Cloudhub-US-East-2</target>
             <applicationName>${applicationName}</applicationName>
-            <muleVersion>${app.runtime}</muleVersion>
+            <muleVersion>4.11.0</muleVersion>
             <username>${username}</username>
             <password>${password}</password>
             <replicas>1</replicas>
