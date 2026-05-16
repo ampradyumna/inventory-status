@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>4.11.0</mule.version>
+		<app.runtime>4.11.0</app.runtime>
 		<mule.maven.plugin.version>4.7.0</mule.maven.plugin.version>
 
 	</properties>
@@ -38,9 +38,9 @@
 							<cloudhub2Deployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<provider>MC</provider>
+								<muleVersion>${app.runtime}</muleVersion>
 								<environment>DEV</environment>
-								<target>Cloudhub-US-East-2</target>								
-								<muleVersion>4.11.0</muleVersion>
+								<target>Cloudhub-US-East-2</target>																
 								<username>${username}</username>
 								<password>${password}</password>
 								<applicationName>inventory-status</applicationName>
@@ -83,10 +83,10 @@
 							<cloudhub2Deployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<provider>MC</provider>
+								<muleVersion>${app.runtime}</muleVersion>
 								<environment>SIT</environment>
 								<applicationName>inventory-status-sit</applicationName>
-								<target>Cloudhub-US-East-2</target>
-								<muleVersion>4.11.0</muleVersion>
+								<target>Cloudhub-US-East-2</target>							
 								<username>${username}</username>
 								<password>${password}</password>								
 								<replicas>1</replicas>
@@ -119,38 +119,26 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<muleVersion>${mule.version}</muleVersion>
-					<cloudhub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<provider>MC</provider>
-						<environment>${environment}</environment>
-						<target>Cloudhub-US-East-2</target>
-						<applicationName>${applicationName}</applicationName>
-						<muleVersion>4.11.0</muleVersion>
-						<username>gopradyumna</username>
-						<password>Almighty@321</password>
-						<applicationName>inventory-status</applicationName>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
-						<properties>
-							<http.port>8081</http.port>
-						</properties>
-						<deploymentSettings>
-							<http>
-								<inbound>
-									<forwardSslSession>false</forwardSslSession>
-									<lastMileSecurity>false</lastMileSecurity>
-								</inbound>
-							</http>
-						</deploymentSettings>
-					</cloudhub2Deployment>
-				</configuration>
-			</plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>${mule.maven.plugin.version}</version>
+    <extensions>true</extensions>
+    <configuration>
+        <muleVersion>${app.runtime}</muleVersion>
+        <cloudhub2Deployment>
+            <uri>https://anypoint.mulesoft.com</uri>
+            <provider>MC</provider>
+            <environment>${environment}</environment>
+            <target>Cloudhub-US-East-2</target>
+            <applicationName>${applicationName}</applicationName>
+            <muleVersion>${app.runtime}</muleVersion>
+            <username>${username}</username>
+            <password>${password}</password>
+            <replicas>1</replicas>
+            <vCores>0.1</vCores>
+        </cloudhub2Deployment>
+    </configuration>
+</plugin>
 		</plugins>
 	</build>
 
